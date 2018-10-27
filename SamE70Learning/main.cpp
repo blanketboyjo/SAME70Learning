@@ -33,9 +33,9 @@ void initSPI(void){
     //Setup SCK to peripheral control
     
     //Setup Particular CSR
-    SPI0->SPI_CSR[0]    =   SPI_CSR_BITS_8_BIT  |
-                            SPI_CSR_SCBR(12)    |
-                            SPI_CSR_CSNAAT_Msk  ;
+    SPI0->SPI_CSR[0]    =   SPI_CSR_BITS_8_BIT  |   // 8 Bit mode
+                            SPI_CSR_SCBR(12)    |   // Clk div of 12
+                            SPI_CSR_CSNAAT_Msk  ;   // Rise after 
     SPI0->SPI_CSR[1]    =   SPI0->SPI_CSR[0];
     SPI0->SPI_CSR[2]    =   SPI0->SPI_CSR[0];
     SPI0->SPI_CSR[3]    =   SPI0->SPI_CSR[0];
